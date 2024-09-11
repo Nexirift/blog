@@ -6568,14 +6568,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^9.0.0":
-  version: 9.0.11
-  resolution: "husky@npm:9.0.11"
-  bin:
-    husky: bin.mjs
-  checksum: 1aebc3334dc7ac6288ff5e1fb72cfb447cfa474e72cf7ba692e8c5698c573ab725c28c6a5088c9f8e6aca5f47d40fa7261beffbc07a4d307ca21656dc4571f07
-  languageName: node
-  linkType: hard
 
 "hyperdyperid@npm:^1.2.0":
   version: 1.2.0
@@ -10926,7 +10918,6 @@ __metadata:
     github-slugger: ^2.0.0
     gray-matter: ^4.0.2
     hast-util-from-html-isomorphic: ^2.0.0
-    husky: ^9.0.0
     image-size: 1.0.0
     lint-staged: ^13.0.0
     next: 14.2.3
