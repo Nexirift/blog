@@ -1,3 +1,5 @@
+import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev'
+
 const { withContentlayer } = require('next-contentlayer2')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -57,6 +59,10 @@ const securityHeaders = [
 const output = process.env.EXPORT ? 'export' : undefined
 const basePath = process.env.BASE_PATH || undefined
 const unoptimized = process.env.UNOPTIMIZED ? true : undefined
+
+if (process.env.NODE_ENV === 'development') {
+  await setupDevPlatform()
+}
 
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
