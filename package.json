@@ -1,7 +1,8 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
-  "version": "2.2.0",
-  "private": true,
+  "name": "@nexirift/blog",
+  "author": "Nexirift",
+  "license": "MIT",
+  "version": "1.0.0",
   "scripts": {
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
