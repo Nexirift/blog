@@ -1,4 +1,4 @@
-import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev'
+const { setupDevPlatform } = require('@cloudflare/next-on-pages/next-dev')
 
 const { withContentlayer } = require('next-contentlayer2')
 
