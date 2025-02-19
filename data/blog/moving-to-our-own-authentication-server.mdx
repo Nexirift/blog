@@ -1,0 +1,21 @@
+---
+title: Moving to our own authentication server
+date: '2025-02-19'
+draft: false
+tags: ['security', 'development', 'news']
+summary: We're transitioning to a custom in-house authentication system for improved security and control
+---
+
+During our development of the core Nexirift project's Nova API server, we encountered significant limitations when working with authentication services like Keycloak and Authentik. These providers offered insufficient control over data and event flows to our API, forcing us to implement workarounds and additional processing layers that added unnecessary complexity to our codebase and slowed down development significantly.
+
+Problems that were encountered during the development of the Nova API server included:
+
+- **Missing the ability to control user settings:** Authentik did not provide a way to set user settings via a different server, such as the API or mobile app. This meant that we would have to redirect the end user to the Authentik settings page every time they wanted to change any of their user settings.
+- **User data was not synchronized between services:** The API server did not have access to the user data stored in Authentik, which meant that we had to use Authentik webhooks to synchronize Authentik data to the API. This added complexity to our codebase and meant that data may not be up-to-date in the API.
+- **No way to implement user setting endpoints:** Since we had no way of changing user settings without redirecting, there was no way for us to implement an endpoint on the API server that would allow developers to update user settings, this would require developers to use the Authentik API for user settings.
+
+Since we have encountered all of these problems while building the API server, we have decided to migrate to a custom authentication server solution. This move away from our third-party authentication service will give us greater control over our security infrastructure, and will help to enable faster iteration on authentication features, and reduce our external dependencies.
+
+The new service will enable us to implement advanced security features, including a compromised user detection system. This system analyzes user activity to identify suspicious behavior. When suspicious activity is detected, the system will automatically lock and temporarily suspend the affected account as a precautionary measure.
+
+Due to these new changes in our infrastructure, we are no longer using the Nexirift [plugin-oidc](https://github.com/nexirift/plugin-oidc) package and have built a new one called [plugin-better-auth](https://github.com/Nexirift/plugin-better-auth). While the plugin-oidc package still works correctly, we cannot ensure any future compatibility and recommend that developers find an alternative until we find a maintainer for the package.
