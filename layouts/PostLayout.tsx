@@ -63,17 +63,27 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   {authorDetails.map((author) => (
                     <li className="flex items-center space-x-2" key={author.name}>
                       {author.avatar && (
-                        <Image
-                          src={author.avatar}
-                          width={38}
-                          height={38}
-                          alt="avatar"
-                          className="h-10 w-10 rounded-full"
-                        />
+                        <Link href={`/staff/${author.slug}`}>
+                          <Image
+                            src={author.avatar}
+                            width={38}
+                            height={38}
+                            alt={`${author.name}'s avatar`}
+                            className="h-10 w-10 rounded-full"
+                          />
+                        </Link>
                       )}
                       <dl className="text-sm leading-5 font-medium whitespace-nowrap">
                         <dt className="sr-only">Name</dt>
-                        <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
+                        <dd>
+                          <Link
+                            href={`/staff/${author.slug}`}
+                            className="text-gray-900 dark:text-gray-100"
+                          >
+                            {author.name}
+                          </Link>
+                          <p className="text-xs text-gray-400">{author.occupation}</p>
+                        </dd>
                         <dt className="sr-only">Twitter</dt>
                         <dd>
                           {author.twitter && (
