@@ -1,5 +1,6 @@
 {
-  "security": 1,
-  "development": 1,
-  "news": 2
+  "privacy": 1,
+  "security": 2,
+  "development": 2,
+  "news": 3
 }
