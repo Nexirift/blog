@@ -9,7 +9,7 @@ const siteMetadata = {
   siteUrl: 'https://blog.nexirift.com',
   siteRepo: 'https://github.com/Nexirift/blog',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/social-card.jpg`,
   email: 'blog@nexirift.com',
   github: 'https://github.com/Nexirift',
   twitter: 'https://twitter.com/Nexirift',

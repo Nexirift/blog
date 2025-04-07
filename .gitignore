@@ -45,3 +45,6 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+
+# Temporary
+data/blog/development-progress-update-1.mdx
