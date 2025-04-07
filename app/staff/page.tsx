@@ -16,7 +16,7 @@ export default function Page() {
           Staff
         </h1>
       </div>
-      <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
+      <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:space-y-0 xl:gap-x-8">
         <ul className="flex flex-wrap justify-center gap-4 pt-8 sm:space-x-12 xl:block xl:space-y-8 xl:space-x-0">
           {allAuthors
             .sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999))
