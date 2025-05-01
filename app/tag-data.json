@@ -1,6 +1,8 @@
 {
+  "community": 1,
+  "artists": 1,
+  "news": 5,
   "development": 3,
-  "news": 4,
   "privacy": 1,
   "security": 2
 }
