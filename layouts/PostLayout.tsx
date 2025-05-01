@@ -30,7 +30,7 @@ interface LayoutProps {
 }
 
 export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
-  const { filePath, path, slug, date, title, tags } = content
+  const { filePath, path, slug, date, title, tags, draft } = content
   const basePath = path.split('/')[0]
 
   return (
@@ -52,6 +52,12 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>
+                {draft && (
+                  <p className="pt-4 text-red-500">
+                    You are viewing a draft version of this post. Information may not be up to date,
+                    complete or valid.
+                  </p>
+                )}
               </div>
             </div>
           </header>
