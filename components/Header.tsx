@@ -34,7 +34,7 @@ const Header = () => {
               <strong className="font-semibold">Notice:</strong> We are moving to the Fediverse.
               Posts prior to the 15th of October do not reflect the new platform. Read more{' '}
               <Link
-                href="/blog/moving-on-to-the-fediverse"
+                href="/blog/nexirift-is-coming-to-the-fediverse"
                 className="font-medium underline transition-colors hover:text-blue-600 dark:hover:text-blue-300"
               >
                 here
